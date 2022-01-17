@@ -1,0 +1,48 @@
+.days_item{
+    background: #2e82f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    flex: 1 1 auto;
+    min-width: 110px;
+    max-width: 128px;
+    cursor: pointer;
+    .days_name{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 7px;
+    }
+    .days_data{
+        font-size: 14px;
+        line-height: 17px;
+        color: #333;
+        margin-bottom: 7px;
+    }
+    .days_img{
+        img{
+        width: 80px;
+        height: 48px;
+        object-fit: none;
+        margin-bottom: 7px;
+        }
+    }
+    .days_max{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 7px;
+    }
+    .days_min{
+        font-size: 13px;
+        line-height: 16px;
+        color: #333;
+        margin-bottom: 7px;
+    }
+    .days_descr{
+        font-size: 13px;
+        line-height: 16px;
+        margin-bottom: 7px;
+        color: #333;
+    }
+}

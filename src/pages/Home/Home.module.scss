@@ -1,0 +1,11 @@
+.block__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+@media(max-width:970px){
+   .block__top{
+       flex-direction: column;
+       
+   } 
+}

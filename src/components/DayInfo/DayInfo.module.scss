@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.day__info{
+    width: 700px;
+    background: $card-background;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 20px;
+    position: relative;
+    height: 233px;
+}
+.info__img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media(max-width: 970px){
+    .day__info{
+        margin: 10px auto;
+        max-width: 90%;
+    }
+}
+@media(max-width: 420px){
+    .day__info{
+       
+        max-width: 100%;
+    }
+}

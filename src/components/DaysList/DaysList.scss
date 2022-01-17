@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+.days-list{
+    background: $card-background;
+    display: flex;
+    padding: 10px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    flex-wrap: wrap;
+    @media(max-width: 676px){
+        justify-content: center;
+    }
+}

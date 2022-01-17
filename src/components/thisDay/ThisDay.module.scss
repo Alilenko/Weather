@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.this__day{
+    padding: 20px;
+    max-width: 400px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background: $card-background;
+    width: 100%;
+    margin-right: 10px;
+    height: 233px;
+}
+.this__block{
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.temp{
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 117px;
+    color: $lite-color;
+}
+.day{
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.time, .city{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+    
+}
+@media(max-width: 970px){
+    .this__day{
+        margin: 10px auto;
+    }
+}
+@media(max-width:420px){
+    .this__day{
+        max-width: 100%;
+    }
+}
