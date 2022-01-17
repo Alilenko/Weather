@@ -36,7 +36,7 @@ export const DayInfo = () => {
         {
             id: 'precipitation',
             name: 'Осадки',
-            value: `Вероятность дождя ${humidity}%`
+            value: `Вероятность осадков ${humidity}%`
         },
         {
             id: 'wind',
