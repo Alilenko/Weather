@@ -9,7 +9,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename='/Weather'>
         <App />
       </Router>
     </Provider>
