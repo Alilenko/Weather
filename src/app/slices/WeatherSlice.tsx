@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction  } from "@reduxjs/toolkit";
 
-
-
 const initialState = {
     
     weatherDay: [
@@ -18,15 +16,9 @@ const initialState = {
     loading: false,
     error: false,
     city: 'Kyiv',
-    weatherDays: [
-        {
-            data: '28 января',
-            imgName: 'Cloud',
-            term: '+4',
-            termnight: '+1',
-            descr: 'string',
-        }
-    ],
+    weatherDays: [],
+    openModal: false,
+    openThanksModal: false
  
 }
 
@@ -52,8 +44,18 @@ const weatherSlice = createSlice({
             state.loading = false
             console.log(state.weatherDays)
         }),
-        showMoreInfoDay: ((state, action:PayloadAction<[]>) => {
-            console.log(state.weatherDays)
+        showMoreInfoDay: ((state, action:PayloadAction<number>) => {
+            console.log(state.weatherDays);
+            console.log(action.payload);
+            
+            //const more = state.weatherDays.filter(item => item.data == action.payload) 
+        }),
+        setOpenModal: (state => {
+            state.openModal = !state.openModal
+            
+        }),
+        setThanksModal: (state => {
+            state.openThanksModal = !state.openThanksModal
         })
     }
 })
@@ -66,5 +68,7 @@ export const {
     weatherError,
     changeCity, 
     weatherSevenDayLoaded, 
-    showMoreInfoDay
+    showMoreInfoDay,
+    setOpenModal,
+    setThanksModal
 } = actions;

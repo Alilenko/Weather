@@ -53,8 +53,10 @@ const DaysListItem = ({day}: Props) => {
         imgWeather = 'http://openweathermap.org/img/wn/02d@2x.png'
     }
   
-    const handleMoreInfo = (one:any) => {
+    const handleMoreInfo = (one:number) => {
         dispatch(showMoreInfoDay(one))
+
+        
     }
 
     return (

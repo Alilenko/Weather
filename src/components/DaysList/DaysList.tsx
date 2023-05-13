@@ -5,11 +5,15 @@ import Spinner from '../Spinner/Spinner';
 
 
 export interface Days {
-    data: any,
+    data: number,
     imgName: string,
-    temp: string,
-    tempnight: string,
+    temp: number,
+    tempnight: number,
+    tempFeels: number
     descr: string,
+    humidity: number,
+    pressure: number,
+    wind: number
 }
 
 interface RootState {

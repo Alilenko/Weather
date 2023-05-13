@@ -6,6 +6,9 @@ import useWeather from '../../app/services/useWeather';
 import {useEffect} from 'react';
 import {weatherLoaded, weatherLoading, weatherSevenDayLoaded} from '../../app/slices/WeatherSlice';
 import {useDispatch, useSelector} from 'react-redux';
+import Modal from '../../components/Modal/Modal';
+import CustomForm from '../../components/Form/Form';
+import Thank from '../../components/Form/Thank/Thank';
 
 
 interface Props {
@@ -19,7 +22,7 @@ export const Home = (props: Props) => {
     const { getWeather, getWeatherDays} = useWeather();
     const dispatch = useDispatch()
     const selectIsOn = (state: RootState) => state.weather
-    const {city} = useSelector(selectIsOn)
+    const {city, openModal, openThanksModal} = useSelector(selectIsOn)
 
     
     useEffect(() => {
@@ -31,7 +34,7 @@ export const Home = (props: Props) => {
         getWeatherDays().then(loadedSeven)
     }, [city])
 
-
+    
     const loadedDay = (res:any) => {
         dispatch(weatherLoaded(res))
     }
@@ -39,6 +42,7 @@ export const Home = (props: Props) => {
     const loadedSeven = (res:any) => {
         dispatch(weatherSevenDayLoaded(res))
     }
+    
 
     return (
         <div className={s.home} >
@@ -47,6 +51,8 @@ export const Home = (props: Props) => {
             <DayInfo />
             </div>
             <DaysList/>
+            <Modal open={openModal} children={<CustomForm/>}/>
+            {openThanksModal ? <Modal open={openThanksModal} children={<Thank/>}/> : null}
         </div>
     )
 }
